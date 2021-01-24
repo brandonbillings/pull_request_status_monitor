@@ -81,7 +81,6 @@ class PrStatusWorker:
                     prs_within_threshold[pr_number] = pull_request
 
         if prs_exceeds_threshold or prs_within_threshold:
-            print("SENDING MESSAGE")
             self.send_slack_message(prs_exceeds_threshold, prs_within_threshold)
 
     def pr_exceeds_threshold(self, created_date_str):
@@ -142,6 +141,7 @@ class PrStatusWorker:
         }
 
         response = requests.post(slack_api_url, headers=post_header, data=msg_data)
+        test = 1
 
     def stop_pr_status_polling(self):
         self._status_worker_polling = False
