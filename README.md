@@ -20,7 +20,7 @@ There is a dummy_pr_folder in this repo where a simple text file lives.  In orde
 branch off master, and would make changes to the text file, and open PR's against master to validate the functionality was working as expected.
 Beyond that, this folder can be ignored.  All of the rest of the core code lives in status_monitor.
 
-#Application Design
+# Application Design
 
 The application itself is fairly straightforward.  It consists of a worker base class (PyStatusWorker) which defines all the core functionality
 and interactions with both the github and slack API's, and a simple invocation script (RunStatusWorker.py) which simply instantiates the worker class
@@ -35,7 +35,7 @@ https://github.com/PyGithub/PyGithub
 https://github.com/slackapi/python-slack-sdk
 ```
 
-#Containerization
+# Containerization
 
 The application runs in a standard docker container using the 3.9.1-slim official python base image from dockerhub.  There is a basic
 docker-compose yaml file that defines the container service and build context, and really the only configuration needed is setting
@@ -62,7 +62,7 @@ And when that completes we can then go see our image in ECR and check the vulner
 
 ![](https://lh3.googleusercontent.com/pw/ACtC-3f1RJikjyh8e2EIDmeaOmy84dtf5X3Utmis4GNZRR-WjPordKwJHeGKjouFc3QheXMMP8G7jktYbPnLT4vo0vxYm2nt2oBZ3L00EHMSFuXtmF4zG3KGv7jbXvmug6vSuAX5CYCZTEyuirxfIo61CRCi=w2543-h1101-no?authuser=0)
 
-#Kubernetes Deployment
+# Kubernetes Deployment
 
 For the sake of this exercise, all deployment tasks will be within the scope of a local minikube cluster.  In a true production environment there would be other tools to manage the kubernetes cluster/node infrastructure, like EKS for cloud, 
 or something like Rancher for an on-prem configuration. So now that we have our image built and pushed to our repo, we can deploy it.
