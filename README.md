@@ -90,7 +90,7 @@ Then we simply apply the deployment.  And check to see that our 3 pods are initi
 Step 4:
 
 Now we open our slack channel and verify everything is working. You can see below, that becuase we have three pods running the container, and our poll cycle is set to 60 seconds, each minute we are getting blocks of three
-messages sent to us from the monitor app (in this example i have *one* open/unreviewed PR in my target repo".  Again, while this is not a real world or practical behavior, it just demonstrates the deployment is functioning as expected. 
+messages sent to us from the monitor app (in this example i have *one* open/unreviewed PR in my target repo).  Again, while this is not a real world or practical behavior, it just demonstrates the deployment is functioning as expected. 
 
 ![](https://lh3.googleusercontent.com/pw/ACtC-3eS3KWUK9CRKZv0Ce_-ac2Xeeierw2WZHEDaTkGIhWfaf9rZ22vbhFC1H_IXkj0dczChWcpB86yVEbfbVZPpFl31ferYhqFhxa0bdhh42TtxFK-mbPcVqy3iOsqE-f4rCFiycqgGmX5dIgfHLAUR_JR=w1398-h1297-no?authuser=0)
 
