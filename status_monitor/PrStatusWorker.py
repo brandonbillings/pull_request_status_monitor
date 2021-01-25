@@ -141,7 +141,6 @@ class PrStatusWorker:
         }
 
         response = requests.post(slack_api_url, headers=post_header, data=msg_data)
-        test = 1
 
     def stop_pr_status_polling(self):
         self._status_worker_polling = False

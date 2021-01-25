@@ -1,0 +1,17 @@
+version: "3"
+services:
+  monitor_service:
+    build:
+      context: .
+      args:
+        GITHUB_PAT: "7b36364e8e8ff4875ec7d2b920cbd3b39b44beb6"
+        GITHUB_USER: "brandonbillings"
+        GITHUB_REPO: "pull_request_status_monitor"
+        GITHUB_BRANCH: "master"
+        GITHUB_PR_REVIEW_THRESHOLD: "3"
+        SLACK_BOT_TOKEN: "xoxb-1664532813269-1664768822229-DIp8qParQfER5FKhu3n6T5MX"
+        SLACK_CHANNEL: "#ss-pull-request-status-monitor"
+        SLACK_USER: "brandonbillings"
+        PR_STATUS_MONITOR_POLL_FREQUENCY: "60"
+    image: status_monitor
+    command: python /home/pyworker/RunStatusWorker.py

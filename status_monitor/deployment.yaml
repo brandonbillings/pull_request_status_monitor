@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: status-monitor-deployment
+  labels:
+    app: status-monitor
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: status-monitor
+  template:
+    metadata:
+      labels:
+        app: status-monitor
+    spec:
+      containers:
+      - name: status-monitor
+        image: 934986094825.dkr.ecr.us-east-1.amazonaws.com/status_monitor_app:latest
